@@ -1,22 +1,41 @@
-public static void fizzBuzz(int n)
+using System;
+
+namespace HackerRank
 {
-    for (int i = 1; i <= n; i++)
+    class Program
     {
-        if ((i % 3) == 0 && (i % 5) == 0)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("FizzBuzz");
+            int n = Convert.ToInt32(Console.ReadLine().Trim());
+
+            Result.fizzBuzz(n);
         }
-        else if ((i % 3) == 0)
+    }
+
+    class Result
+    {
+        public static void fizzBuzz(int n)
         {
-            Console.WriteLine("Fizz");
+            for (int i = 1; i <= n; i++)
+            {
+                if ((i % 3) == 0 && (i % 5) == 0)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                else if ((i % 3) == 0)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else if ((i % 5) == 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+            }
         }
-        else if ((i % 5) == 0)
-        {
-            Console.WriteLine("Buzz");
-        }
-        else
-        {
-            Console.WriteLine(i);
-        }
+
     }
 }
